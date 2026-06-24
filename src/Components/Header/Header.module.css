@@ -1,0 +1,60 @@
+header{
+    border:solid 2px var(--color-text);
+    margin: 20px auto;
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo , .searchBar{
+        display: flex;
+    }
+    .logo ,.searchBtn , .searchInput , .linkIcon{
+        padding:10px 20px;
+    }
+    .logo, .searchBtn, .actions li{
+        &:hover{
+            background-color: black;
+            color: white;
+            transition: var(--transition);
+        }
+    }
+    .logo{
+       font-size: 20px;
+       text-transform: uppercase;
+       font-weight: 700;
+       gap: 10px;
+       border-right: 2px solid;
+
+    }
+    .searchBar{
+        border-left: 2px solid;
+        .searchInput{
+            transition: var(--transition);
+            &:hover, &:focus{
+               border: 2px solid;
+            }
+        }
+        .searchBtn{
+           border:2px solid;
+           border-top: none;
+           border-bottom: none;
+        }
+    }
+    .actions{
+        display: flex;
+        li{
+            transition: var(--transition);
+            border-left: 2px solid;
+            .linkIcon{
+                display: block;
+            }
+        }
+        .activeLink{
+            background-color: black;
+            color: white;
+            svg {
+                fill: white;
+            }
+        }
+    }
+}
