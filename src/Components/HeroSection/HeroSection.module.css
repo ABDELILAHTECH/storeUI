@@ -1,0 +1,79 @@
+.heroSection {
+  height: 70vh;
+  padding-top: 75px;
+  background-color: var(--color-surface);
+  @media (min-width:500px){
+    padding: 0 5vw;
+    height: 55vh;
+  }
+  .swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .swiperSlide {
+      position: relative;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: 350px;
+      background-position: center;
+      background-position-y: 0%;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     @media (min-width:800px) {
+        background-size: 400px;
+        background-position-y: 10%; 
+     }
+      .content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 10%;
+        width: 80%;
+        h2{
+          line-height: 120%;
+          width: 80%;
+          padding: 10px;
+          overflow: hidden;
+          font-weight: 800;
+        }
+        p{
+
+        }
+        button{
+          margin-top: 20px;
+        }
+      }
+    }
+    .autoplayProgress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+  color: var(--swiper-theme-color);
+      svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

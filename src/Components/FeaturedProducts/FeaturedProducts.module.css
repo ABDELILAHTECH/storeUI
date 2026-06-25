@@ -1,0 +1,9 @@
+.featuredProducts{
+    ul{
+        padding: 20px 0;
+        padding-right: 5px;
+        display: flex;
+        gap: 20px;
+        overflow: auto;
+    }
+}

@@ -1,57 +1,88 @@
-header{
-    border:solid 2px var(--color-text);
-    margin: 20px auto;
-    nav{
+header {
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    border: solid 2px var(--color-text);
+    left: 5vw;
+    right: 5vw;
+    margin-top: 20px !important;
+
+    nav {
         display: flex;
         justify-content: space-between;
     }
-    .logo , .searchBar{
+
+    .logo,
+    .searchBar {
         display: flex;
     }
-    .logo ,.searchBtn , .searchInput , .linkIcon{
-        padding:10px 20px;
+
+    .logo,
+    .searchBtn,
+    .searchInput,
+    .linkIcon {
+        padding: 10px 20px;
     }
-    .logo, .searchBtn, .actions li{
-        &:hover{
+
+    .logo,
+    .searchBtn,
+    .actions li {
+        &:hover {
             background-color: black;
             color: white;
+            border-color: black;
             transition: var(--transition);
         }
     }
-    .logo{
-       font-size: 20px;
-       text-transform: uppercase;
-       font-weight: 700;
-       gap: 10px;
-       border-right: 2px solid;
+
+    .logo {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        gap: 10px;
+        border-right: 2px solid;
 
     }
-    .searchBar{
+
+    .searchBar {
+        flex: 1;
+        max-width: 500px;
         border-left: 2px solid;
-        .searchInput{
-            transition: var(--transition);
-            &:hover, &:focus{
-               border: 2px solid;
-            }
+
+        &:has(.searchInput:hover),
+        &:has(.searchInput:focus) {
+            border: 2px solid;
+            border-left-width: 3px;
         }
-        .searchBtn{
-           border:2px solid;
-           border-top: none;
-           border-bottom: none;
+
+        .searchInput {
+            flex: 1;
+            transition: var(--transition);
+        }
+
+        .searchBtn {
+            border: 2px solid;
+            border-top: none;
+            border-bottom: none;
         }
     }
-    .actions{
+
+    .actions {
         display: flex;
-        li{
+
+        li {
             transition: var(--transition);
             border-left: 2px solid;
-            .linkIcon{
+
+            .linkIcon {
                 display: block;
             }
         }
-        .activeLink{
+
+        .activeLink {
             background-color: black;
             color: white;
+
             svg {
                 fill: white;
             }

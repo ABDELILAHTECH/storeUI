@@ -1,0 +1,17 @@
+li.productCard{
+    border: 1px solid;
+    min-width: 260px;
+    padding: 20px;
+    h5{
+        text-wrap: nowrap;
+        overflow: hidden;
+    }
+    .productPrice{
+        font-weight: 800;
+        color: var(--color-text-secondary);
+    }
+    button{
+        margin-top: 15px; 
+        width: 100%;
+    }
+}
