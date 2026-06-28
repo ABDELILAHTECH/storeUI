@@ -3,7 +3,7 @@ import ProductCard from "../ProductCard/ProductCard"
 export default function FeaturedProducts({products}) {
   return (
     <section className={`container ${styles.featuredProducts}`} >
-      <h3>Featured Products</h3>
+      <h2>Featured Products</h2>
       <ul>
       {
         products.map(product => 

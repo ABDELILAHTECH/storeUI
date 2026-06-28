@@ -39,18 +39,17 @@
   /* Transition */
   --transition: 0.3s ease;
 
-  --fs-h1: clamp(2.5rem, 5vw, 4.5rem);
-  --fs-h2: clamp(2rem, 4vw, 3rem);
-  --fs-h3: clamp(1.75rem, 3vw, 2.25rem);
-  --fs-h4: clamp(1.5rem, 2.5vw, 1.75rem);
-  --fs-h5: clamp(1.25rem, 2vw, 1.5rem);
-  --fs-h6: clamp(1.125rem, 1.5vw, 1.25rem);
+  --fs-h1: clamp(2rem, 4vw, 3rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --fs-h3: clamp(1.5rem, 2.5vw, 1.75rem);
+  --fs-h4: clamp(1.25rem, 2vw, 1.5rem);
+  --fs-h5: clamp(1.125rem, 1.5vw, 1.25rem);
 
   --fs-body-lg: clamp(1.125rem, 1.5vw, 1.25rem);
-  --fs-body: clamp(1rem, 1.2vw, 1.125rem);
+  --fs-body: clamp(0.9rem, 1.9vw, 1.125rem);
   --fs-small: clamp(0.875rem, 1vw, 1rem);
 
-  --fs-button: clamp(0.9rem, 1vw, 1rem);
+  --fs-button: clamp(0.9rem, 1.4vw, 1.1rem);
 }
 
 *,
@@ -73,7 +72,9 @@ body {
   color: var(--color-text);
   line-height: 1.6;
 }
-
+h1{
+  line-height: 1.3em;
+}
 img {
   max-width: 100%;
   display: block;
@@ -87,9 +88,14 @@ input {
 button {
   cursor: pointer;
   display: block;
-  background-color: black;
-  color: white;
+  background-color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--fs-button); 
+  transition: var(--transition);
   padding: 10px 25px;
+  &:hover{
+    background-color: var(--color-primary-hover);
+  }
 }
 a {
   text-decoration: none;

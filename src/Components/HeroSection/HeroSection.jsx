@@ -47,7 +47,7 @@ export default function HeroSection() {
                             key={product.id}
                         >
                             <div className={styles.content} >
-                                <h2>{product.title}</h2>
+                                <h1>{product.title}</h1>
                                 <p>{product.description.split(",")[0]}.</p>
                                 <button>Shop Now</button>
                             </div>
