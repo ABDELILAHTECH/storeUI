@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import Products from './pages/Products.jsx'
 import Cart from './pages/Cart.jsx'
 import WishList from './pages/WishList.jsx'
+import CategoryPage from './pages/CategoryPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,7 +18,7 @@ createRoot(document.getElementById('root')).render(
                 <Route path='products' element={<Products />} />
                 <Route path='cart' element={<Cart />} />
                 <Route path='wishlist' element={<WishList />} />
-
+                <Route path="categories/:categoryName" element={<CategoryPage />} />
             </Route>
           </Routes>
       </BrowserRouter>
