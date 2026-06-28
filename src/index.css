@@ -35,6 +35,7 @@
   /* Shadow */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.12);
+  --shadow-sm-header: 0 2px 5px #f974163c;
 
   /* Transition */
   --transition: 0.3s ease;
@@ -72,9 +73,7 @@ body {
   color: var(--color-text);
   line-height: 1.6;
 }
-h1{
-  line-height: 1.3em;
-}
+
 img {
   max-width: 100%;
   display: block;

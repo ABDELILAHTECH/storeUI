@@ -15,8 +15,8 @@ export default function Header() {
   ]
   const { pathname } = useLocation()
   return (
-    <header className="container">
-      <nav>
+    <header >
+      <nav className="container">
         <Link to="/" className={styles.logo}>
           <Store size={26} 
           className={styles.storeIcon} />
